@@ -1,5 +1,6 @@
 
 //Form Input field validation checking function
+/*
 function emptyCheck(){
 	var x =document.forms["insertForm"]["p_code"].value;
 	if(x == ""){
@@ -37,3 +38,4 @@ function emptyCheck(){
 		return false;
 	}
 }
+*/

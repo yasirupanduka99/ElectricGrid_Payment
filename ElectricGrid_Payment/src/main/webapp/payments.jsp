@@ -52,7 +52,7 @@
 				<input id="p_date" name="p_date" type="text" class="form-control form-control-sm">
 
 				
-				<!-- Payment Date
+				<!--  Payment Date
 				<br>
 				<div class="input-group input-group-sm mb-3">
 					<div class="input-group-prepend">
