@@ -50,31 +50,6 @@
 
 				Payment Date: 
 				<input id="p_date" name="p_date" type="text" class="form-control form-control-sm">
-
-				
-				<!--  Payment Date
-				<br>
-				<div class="input-group input-group-sm mb-3">
-					<div class="input-group-prepend">
-						 <span class="input-group-text" id="lblName">Payment Date: </span>
-					</div>
-					<select id="p_date" name="p_date">
-						 <option value="0">Select Payment Date</option>
-						 <option value="January">January</option>
-						 <option value="February">February</option>
-						 <option value="March">March</option>
-						 <option value="April">April</option>
-						 <option value="May">May</option>
-						 <option value="June">June</option>
-						 <option value="July">July</option>
-						 <option value="August">August</option>
-						 <option value="September">September</option>
-						 <option value="October">October</option>
-						 <option value="November">November</option>
-						 <option value="December">December</option>
-					</select>
-				</div>
-				 -->
 				<br> Payment Card No.: 
 				<input id="p_crdnumber" name="p_crdnumber" type="text" class="form-control form-control-sm">
 				<br> Payment CVV: 
