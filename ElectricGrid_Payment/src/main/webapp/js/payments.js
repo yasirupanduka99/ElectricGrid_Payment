@@ -64,7 +64,7 @@ function onPaymentSaveComplete(response, status)
 		 
 		 if (resultSet.status.trim() == "success") 
 		 { 
-			 $("#alertSuccess").text("Successfully saved."); 
+			 $("#alertSuccess").text("Successfully saved Payment Details."); 
 			 $("#alertSuccess").show(); 
 			 
 			 $("#divPaymentsGrid").html(resultSet.data); 
