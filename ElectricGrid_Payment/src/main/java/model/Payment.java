@@ -18,7 +18,7 @@ public class Payment {
 	 con= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/electric", 
 	 "root", ""); 
 	 //For testing
-	 System.out.print("Successfully connected"); 
+	 System.out.print("Successfully Connected To Database!"); 
 	 } 
 	 catch(Exception e) 
 	 { 
@@ -48,7 +48,7 @@ public class Payment {
 			}
 			
 			// Prepare the html table to be displayed
-			 output = "<table border='1'class=\"table table-striped\"><tr><th>Payment Code</th>" 
+			 output = "<table border='1'class='table table-striped'><tr><th>Payment Code</th>" 
 					 + "<th>Payment Status</th>"
 					 + "<th>Payment Date</th>" 
 					 + "<th>Payment Card No.</th>" 
@@ -82,8 +82,8 @@ public class Payment {
 					 output += "<td>" + p_amount + "</td>"; 
 					 
 					 // buttons				 
-					 output += "<td><input name='btnUpdate' " + " type='button' value='Update' " + " class='btnUpdate btn btn-outline-secondary' data-itemid='" + p_ID + "'></td>"
-							 + "<td><input name='btnRemove' " + " type='button' value='Remove' " + " class='btnRemove btn btn-outline-danger' data-itemid='" + p_ID + "'>"
+					 output += "<td><input name='btnUpdate' " + " type='button' value='Update' " + " class='btnUpdate btn btn-outline-secondary' data-paymentid='" + p_ID + "'></td>"
+							 + "<td><input name='btnRemove' " + " type='button' value='Remove' " + " class='btnRemove btn btn-outline-danger' data-paymentid='" + p_ID + "'>"
 							 + "</td></tr>";
 					 
 			 } 
@@ -139,7 +139,7 @@ public class Payment {
 			preparedStmt.execute(); 
 			con.close(); // close the connection
 			 
-			output = "Payment Details Inserted successfully!"; 
+			
 			
 			String newPayment = readPayment(); 
 			output = "{\"status\":\"success\", \"data\": \"" + newPayment + "\"}";
@@ -189,7 +189,7 @@ public class Payment {
 			preparedStmt.execute();
 			con.close();
 
-			output = "Payment Details Updated successfully!";
+			
 			
 			
 			String newPayment = readPayment(); 
@@ -234,7 +234,7 @@ public class Payment {
 		 preparedStmt.execute(); 
 		 con.close(); 
 		 
-		 output = "Payment Detail Deleted successfully!";
+		 
 		 
 		 String newPayment = readPayment(); 
 		 output = "{\"status\":\"success\", \"data\": \"" + newPayment + "\"}";

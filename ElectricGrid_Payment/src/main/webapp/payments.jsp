@@ -12,7 +12,6 @@
 	<title>Electric Grid</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
-	<script src="js/validation.js" type="text/javascript"></script>
 	<script src="js/payments.js" type="text/javascript"></script>
 </head>
 <body>
@@ -58,8 +57,7 @@
 				<input id="p_amount" name="p_amount" type="text" class="form-control form-control-sm">
 				<br>
 				
-				<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary">
-				
+				<input id="btnSave" name="btnSave" type="button" value="save" class="btn btn-primary">
 				<input type="hidden" id="hidPaymentIDSave" name="hidPaymentIDSave" value="">
 			</form>
 			

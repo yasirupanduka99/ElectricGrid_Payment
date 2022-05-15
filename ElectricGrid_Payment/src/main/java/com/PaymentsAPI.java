@@ -20,7 +20,7 @@ import java.util.Scanner;
 @WebServlet("/PaymentsAPI")
 public class PaymentsAPI extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	Payment paymentObj = new Payment(); 
 
     public PaymentsAPI() {
         super();
@@ -36,7 +36,7 @@ public class PaymentsAPI extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Payment paymentObj = new Payment(); 
+		
 
 		String output = paymentObj.insertPayment(request.getParameter("p_code"), 
 								request.getParameter("p_status"), 
@@ -78,7 +78,7 @@ public class PaymentsAPI extends HttpServlet {
 
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Payment paymentObj = new Payment(); 
+		
 		
 		Map paras = getParasMap(request); 
 		
@@ -97,7 +97,7 @@ public class PaymentsAPI extends HttpServlet {
 
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Payment paymentObj = new Payment(); 
+		
 		
 		Map paras = getParasMap(request); 
 		

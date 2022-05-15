@@ -1,10 +1,7 @@
 
 //Let’s hide the alerts on page load. 
-$(document).ready(function() { 
-	if ($("#alertSuccess").text().trim() == "") { 
-	 	$("#alertSuccess").hide(); 
-	} 
-	
+$(document).ready(function() {  
+	$("#alertSuccess").hide(); 
  	$("#alertError").hide(); 
 });
 
@@ -17,41 +14,41 @@ function validatePaymentForm()
 	// CODE
 	if ($("#p_code").val().trim() == "") 
 	{ 
-	 	return "Insert Payment Code."; 
+	 	return "Insert Payment Code!"; 
 	} 
 	// STATUS
 	if ($("#p_status").val().trim() == "") 
 	{ 
-	 	return "Insert Payment Status."; 
+	 	return "Insert Payment Status!"; 
 	} 
 	// PRICE-------------------------------
 	if ($("#p_date").val().trim() == "") 
 	{ 
-	 	return "Insert Payment Date."; 
+	 	return "Insert Payment Date!"; 
 	} 
 	// Payment Card No & CVV are numerical value
 	var tmpcrdNo = $("#p_crdnumber").val().trim(); 
 	if (!$.isNumeric(tmpcrdNo)) 
 	{ 
-	 	return "Insert a numerical value for Payment Card No."; 
+	 	return "Insert a numerical value for Payment Card No!"; 
 	}
 	
 	var tmpCVV = $("#p_cvv").val().trim(); 
 	if (!$.isNumeric(tmpCVV)) 
 	{ 
-	 	return "Insert a numerical value for Payment Card CVV."; 
+	 	return "Insert a numerical value for Payment Card CVV!"; 
 	}
 	 
 	// Amount------------------------
 	if ($("#p_amount").val().trim() == "") 
 	{ 
-	 	return "Insert Payment Amount."; 
+	 	return "Insert Payment Amount!"; 
 	} 
 	
 	var tmpAmount = $("#p_amount").val().trim(); 
 	if (!$.isNumeric(tmpAmount)) 
 	{ 
-	 	return "Insert a numerical value for Payment Amount."; 
+	 	return "Insert a numerical value for Payment Amount!"; 
 	} 
 	 
 	return true; 
@@ -69,7 +66,9 @@ function onPaymentSaveComplete(response, status)
 		 { 
 			 $("#alertSuccess").text("Successfully saved."); 
 			 $("#alertSuccess").show(); 
+			 
 			 $("#divPaymentsGrid").html(resultSet.data); 
+			 
 		 } else if (resultSet.status.trim() == "error") 
 		 { 
 			 $("#alertError").text(resultSet.data); 
@@ -166,7 +165,7 @@ $(document).on("click", "#btnSave", function(event) {
 
 // Implement the Update button handler
 $(document).on("click", ".btnUpdate", function(event) {
-	  $("#hidPaymentIDSave").val($(this).data("itemid"));   
+	  $("#hidPaymentIDSave").val($(this).data("paymentid"));   
 	  $("#p_code").val($(this).closest("tr").find('td:eq(0)').text()); 
 	  $("#p_status").val($(this).closest("tr").find('td:eq(1)').text()); 
 	  $("#p_date").val($(this).closest("tr").find('td:eq(2)').text()); 
@@ -184,7 +183,7 @@ $(document).on("click", ".btnRemove", function(event)
 	 { 
 		 url : "PaymentsAPI", 
 		 type : "DELETE", 
-		 data : "p_ID=" + $(this).data("itemid"),
+		 data : "p_ID=" + $(this).data("paymentid"),
 		 dataType : "text", 
 		 complete : function(response, status) 
 		 { 
